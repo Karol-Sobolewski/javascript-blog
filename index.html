@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My HTML Page</title>
+  <title>My Blog</title>
   <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div class="blog">
   <div class="container">
-    <h1 class="logo">my blog</h1>
+    <header class="splash">
+      <div class="splash-inner">
+        <h1 class="splash-title logo"><a href="#">my blog</a></h1>
+      </div>
+    </header>
     <main class="wrapper">
-      <aside class="sidebar">
+      <aside class="sidebar sidebar-left">
         <h2 class="section-title">All posts</h2>
-        <ul class="list titles"">
+        <ul class="list titles" id="one">
         </ul>
       </aside>
       <section class="posts">
@@ -203,7 +208,20 @@
           </div>
         </article>
       </section>
-      <aside class="sidebar">
+      <aside class="sidebar sidebar-right">
+        <h2 class="section-title">About me</h2>
+        <div class="about">
+          <div class="about-img">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+          </div>
+            <p>Duis non dolor efficitur erat interdum fringilla a lobortis.</p>
+          <ul class="social-icons">
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>Facebook</li>
+            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>Twitter</li>
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>Instagram</li>
+            <li><a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>Pinterest</li>
+          </ul>
+        </div>
         <h2 class="section-title">Tags</h2>
         <ul class="list tags">
           <li><a href="#">design</a> <span>(6)</span></li>
