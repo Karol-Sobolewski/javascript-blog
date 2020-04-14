@@ -29,9 +29,10 @@ body {
 a {
   text-decoration: none;
   color: $color-dark;
-	&:hover {
-		color:$color-medium;
-	}
+
+  &:hover {
+    color: $color-medium;
+  }
 }
 
 .container {
@@ -44,6 +45,7 @@ a {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -68,16 +70,18 @@ a {
 
 .logo {
   margin: 0;
-  padding: 45px 0 0 20px; 
+  padding: 45px 0 0 20px;
   font-family: $font-logo;
   font-weight: 400;
   font-size: 104px;
   line-height: 1;
+
   a {
     color: $color-light;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+
     &:hover {
-      color:$color-medium;
+      color: $color-medium;
     }
   }
 }
@@ -91,13 +95,14 @@ a {
   flex: 1 0 0;
   background: #808c97;
 }
+
 .posts {
   flex: 2 0 0;
 }
 
 .sidebar, .posts {
   position: relative;
-  overflow: hidden;  
+  overflow: hidden;
   min-height: 680px;
   margin-right: 10px;
   padding: 40px;
@@ -108,21 +113,29 @@ a {
 .sidebar-left {
   color: $color-light;
   margin-left: -10px;
+
   a {
     color: $color-light;
+
     &:hover {
-      color:$color-dark;
+      color: $color-dark;
     }
   }
 }
 
 .sidebar-right {
+  display: flex;
+  flex-direction: column;
   margin-right: 0;
   background: $color-light;
 }
 
 
 /* About */
+
+.sidebar-about {
+  order: -1;
+}
 
 .about {
   display: flex;
@@ -131,30 +144,32 @@ a {
   align-items: center;
   text-align: center;
 }
-  
+
 .about-img {
-	overflow: hidden;
-	width: 150px;
+  overflow: hidden;
+  width: 150px;
   height: 150px;
   border-radius: 50%;
-	img {
-		position: relative;
-		transition: $transition;
+
+  img {
+    position: relative;
+    transition: $transition;
     width: 100%;
     height: 100%;
     object-fit: cover;
-		&:hover {
-			transform: scale(1.2);
-		}
-	}
-}
 
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
 
 .social-icons {
   justify-content: center;
   display: flex;
   padding: 0;
   list-style: none;
+
   li {
     position: relative;
     padding: 0 10px;
@@ -162,6 +177,7 @@ a {
     text-align: center;
     text-decoration: none;
   }
+
   a {
     display: block;
     transition: $transition;
@@ -174,6 +190,7 @@ a {
     line-height: 30px;
     text-align: center;
     color: $color-light;
+
     &:hover {
       transform: scale(1.5);
     }
@@ -186,6 +203,7 @@ a {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   .active {
     font-weight: bold;
   }
@@ -212,6 +230,7 @@ a {
   top: 40px;
   opacity: 0;
   transition: $transition;
+
   &.active {
     opacity: 100;
     position: static;
@@ -224,7 +243,79 @@ a {
 
 .post-tags {
   display: flex;
+
   p {
     margin: 0 10px 0 0;
+  }
+}
+
+
+/* Media */
+
+@media (max-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+    margin: 0;
+    //padding: 0;
+  }
+
+  .sidebar-left {
+    display: flex;
+    flex-direction: column;
+    //flex: 1 0 0;
+    min-height: 300px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+
+      li {
+        padding: 20px;
+      }
+    }
+  }
+
+  .sidebar-right {
+    top: -150px;
+    min-height: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .sidebar {
+    margin: 0;
+  }
+
+  .sidebar-tags {
+    display: flex;
+    flex: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      li {
+        padding: 10px;
+      }
+    }
+  }
+
+  .sidebar-authors {
+    flex: 100%;
+  }
+
+  .sidebar-about {
+    flex: 100%;
+    order: 3;
   }
 }
