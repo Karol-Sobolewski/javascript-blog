@@ -143,7 +143,7 @@
     for (let activeLink of activeLinks){
 
       /* remove class active */
-      activelink.classList.remove('active');
+      activeLink.classList.remove('active');
 
     /* END LOOP: for each active tag link */
     }
@@ -152,10 +152,10 @@
     const tagLinks = article.querySelectorAll ('a[href="' + href + '"]');
 
     /* START LOOP: for each found tag link */
-    for (let tagLink of tagLinks){
+    for (tagLink of tagLinks){
 
       /* add class active */
-      tagLink.classList.add('acive');
+      tagLink.classList.add('active');
 
     /* END LOOP: for each found tag link */
     }
@@ -188,7 +188,7 @@
     const articles = document.querySelectorAll(optArticleSelector);
 
     /* START LOOP: for every article: */
-    for (let article of articles) {
+    for (article of articles) {
 
       /* find author wrapper */
       const authorWrap = article.querySelector(optArticleAuthorSelector);
@@ -234,10 +234,10 @@
     const activeLinks = article.querySelectorAll('a.active[href="#author-"]');
 
     /* START LOOP: for each active author link */
-    for (let activeLink of activeLinks){
+    for (activeLink of activeLinks){
 
       /* remove class active */
-      activeLink.classList.remove('active');
+      activelink.classList.remove('active');
 
     /* END LOOP: for each active author link */
     }
@@ -246,10 +246,10 @@
     const authorLinks = article.querySelectorAll ('a[href="' + href + '"]');
 
     /* START LOOP: for each found author link */
-    for (let authorLink of authorLinks){
+    for (authorLink of authorLinks){
 
       /* add class active */
-      authorLink.classList.add('acive');
+      authorLink.classList.add('active');
 
     /* END LOOP: for each found author link */
     }
