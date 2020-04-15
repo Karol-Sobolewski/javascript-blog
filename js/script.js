@@ -85,7 +85,7 @@
     const articles = document.querySelectorAll(optArticleSelector);
 
     /* START LOOP: for every article: */
-    for (article of articles) {
+    for (let article of articles) {
 
       /* find tags wrapper */
       const tagsList = article.querySelector(optArticleTagsSelector);
@@ -101,7 +101,7 @@
       const articleTagsArray = articleTags.split(' ');
 
       /* START LOOP: for each tag */
-      for (tag of articleTagsArray){
+      for (let tag of articleTagsArray){
 
         /* generate HTML of the link */
         const linkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li> ';
@@ -140,7 +140,7 @@
     const activeLinks = article.querySelectorAll('a.active[href^="#tag-"]');
 
     /* START LOOP: for each active tag link */
-    for (activeLink of activeLinks){
+    for (let activeLink of activeLinks){
 
       /* remove class active */
       activelink.classList.remove('active');
@@ -152,7 +152,7 @@
     const tagLinks = article.querySelectorAll ('a[href="' + href + '"]');
 
     /* START LOOP: for each found tag link */
-    for (tagLink of tagLinks){
+    for (let tagLink of tagLinks){
 
       /* add class active */
       tagLink.classList.add('acive');
@@ -188,7 +188,7 @@
     const articles = document.querySelectorAll(optArticleSelector);
 
     /* START LOOP: for every article: */
-    for (article of articles) {
+    for (let article of articles) {
 
       /* find author wrapper */
       const authorWrap = article.querySelector(optArticleAuthorSelector);
@@ -231,13 +231,13 @@
     const author = href.replace('#author-', '');
 
     /* find all author links with class active */
-    const activeLinks = article.querySelectorAll('a.active[href^="#author-"]');
+    const activeLinks = article.querySelectorAll('a.active[href="#author-"]');
 
     /* START LOOP: for each active author link */
-    for (activeLink of activeLinks){
+    for (let activeLink of activeLinks){
 
       /* remove class active */
-      activelink.classList.remove('active');
+      activeLink.classList.remove('active');
 
     /* END LOOP: for each active author link */
     }
@@ -246,7 +246,7 @@
     const authorLinks = article.querySelectorAll ('a[href="' + href + '"]');
 
     /* START LOOP: for each found author link */
-    for (authorLink of authorLinks){
+    for (let authorLink of authorLinks){
 
       /* add class active */
       authorLink.classList.add('acive');
