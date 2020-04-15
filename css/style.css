@@ -92,7 +92,7 @@ a:hover {
 .sidebar, .posts {
   position: relative;
   overflow: hidden;
-  min-height: 680px;
+  min-height: 800px;
   margin-right: 10px;
   padding: 40px;
   border-bottom-right-radius: 5px;
@@ -218,11 +218,13 @@ a:hover {
   position: absolute;
   top: 40px;
   opacity: 0;
+  z-index: -1;
   transition: all 0.5s;
 }
 
 .post.active {
   opacity: 100;
+  z-index: 1;
   position: static;
 }
 
@@ -241,7 +243,6 @@ a:hover {
 
 /* Media */
 @media (max-width: 767px) {
-  /* posts menu order */
   .wrapper {
     -ms-flex-direction: column;
         flex-direction: column;
