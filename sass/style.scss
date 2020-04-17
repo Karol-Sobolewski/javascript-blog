@@ -252,7 +252,34 @@ a {
   }
 }
 
+.list.tags {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
+.tag-size-1 {
+  font-size: 12px;
+}
+
+.tag-size-2 {
+  font-size: 14px;
+}
+
+.tag-size-3 {
+  font-size: 16px;
+}
+
+.tag-size-4 {
+  font-size: 20px;
+}
+
+.tag-size-5 {
+  font-size: 24px;
+}
 /* Media */
 
 @media (max-width: 767px) {
